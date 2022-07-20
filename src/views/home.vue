@@ -252,7 +252,7 @@ export default {
 
   methods: {
     open_btn() {
-      alert(this.openBtn);
+    //  alert(this.openBtn);
       if (this.openBtn == true) {
         return (this.openBtn = false);
       }
@@ -271,17 +271,17 @@ export default {
       return (this.openAction = "");
     },
     wel() {
-      alert("working");
+    //  alert("working");
       this.$router.push("/user:id");
     },
 
     update() {
-      alert("update");
+      alert("updated");
       this.$router.push("/update:id");
     },
 
     modal() {
-      alert(this.openmodal);
+    //  alert(this.openmodal);
       if (this.openmodal == true) {
         return (this.openmodal = false);
       }

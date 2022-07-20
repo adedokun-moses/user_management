@@ -14,13 +14,13 @@
             placeholder="Enter Your First Name" />
         </div>
         <div class="formgroup">
-          <label>First Name </label><br />
+          <label>Last Name </label><br />
           <input type="text" placeholder="Enter Your First Name" />
         </div>
       </div>
 
       <div class="formgroup_">
-        <label>First Name </label><br />
+        <label>Email Address </label><br />
         <input
           type="email"
           placeholder="Enter Your First Name"
@@ -50,7 +50,7 @@
         <button >Register</button>
         <h4>
           Already have an account
-          <span><router-link to='/HomeView'>Sign Up Here</router-link></span>
+          <span><router-link to='#'>Sign Up Here</router-link></span>
         </h4>
       </div>
     </form>
@@ -140,17 +140,7 @@ return{
   background: #a3a6ad;
   transition: ease-in 2s background;
 }
-vue-tel-input{
-   width: 95%;
-  background: #ffffff;
-  padding: 15px 10px;
-  margin: 10px 0px;
-  outline: none;
-  border: none;
-  border: 1px solid #a3a6ad;
-  border-radius: 8px;
 
-}
 .formgroup_ select {
   width: 98%;
   background: #ffffff;
@@ -162,7 +152,7 @@ vue-tel-input{
   border-radius: 8px;
 }
 
-.formgroup_1 {
+/* .formgroup_1 {
   width: 95%;
   background: #ffffff;
   padding: 15px 10px;
@@ -171,7 +161,7 @@ vue-tel-input{
   border: none;
   border: 1px solid #a3a6ad;
   border-radius: 8px;
-}
+} */
 
 .formgroup_ button {
   width: 98%;
@@ -192,6 +182,19 @@ vue-tel-input{
 .formgroup_ a {
   text-decoration: none;
 }
+
+.formgroup_1{
+  width: 95%;
+  background: #ffffff;
+  padding: 10px 10px;
+  margin: 10px 0px;
+  outline: none!important;
+  border: none !important;;
+  border: 1px solid #a3a6ad;
+  border-radius: 8px;
+}
+
+
 
 @media only screen and (max-width: 600px){
   .regform {
@@ -221,7 +224,14 @@ vue-tel-input{
   width: 90%;
 }
 
+.formgroup_1{
+  width: 90%;
 
+}
+.formgroup_ h4 {
+  text-align: left;
+  margin: 10px 0px;
+}
 
 
 }

@@ -80,6 +80,7 @@ button{
   width: 40%; /* Could be more or less, depending on screen size */
   color: black;
   border-radius: 8px;
+  height: 200px;
  
 }
 
@@ -113,6 +114,24 @@ button{
   color: black;
   text-decoration: none;
   cursor: pointer;
+}
+
+@media only screen and (max-width: 600px){
+  .modal-content {
+    width: 80%;
+  }
+
+  .modal-content button{
+    padding: 13px ;
+    border:  2px solid #F5F5F5;
+    background: #F5F5F5;
+    margin: 5px;
+    width: 50%;
+    border-radius: 8px;
+    margin-top: 20px;
+    color: black;
+  
+}
 }
 </style>
 

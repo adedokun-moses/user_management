@@ -3,8 +3,9 @@
          <h5>Logo</h5>
 
         <div class="congrat">
-            <h5>Your account has been created successfully</h5>
-       <!--      <i class="fa fa-spinner"></i> -->
+            <h5>Your account has been created successfully </h5>
+            <h3><br><span style="padding-top: 10px"><i class="fa fa-spinner fa-3x fa-spin"></i> </span></h3>
+                
                   <img src="../assets/pana.png"  alt="welcome">
         </div>
        
@@ -18,7 +19,7 @@ export default {
 
   },
   mounted(){
-        setTimeout( () => this.$router.push({ path: '/home'}), 4000);
+        setTimeout( () => this.$router.push({ path: '/home'}), 7000);
   }
 }
 </script>
@@ -44,5 +45,27 @@ export default {
     margin: 0px;
 }
 
+@media only screen and (max-width: 600px){
 
+.congrat {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+
+}
+.container h5 {
+  padding: 0px 0px;
+  font-size: 20px;
+  text-align: center;
+}
+.congrat img{
+  width: 100%;
+
+}
+.container h5 {
+  padding: 10px 30px;
+  font-size: 20px;
+}
+
+}
 </style>
