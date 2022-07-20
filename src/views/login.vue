@@ -136,6 +136,10 @@ return{
   border: 1px solid #a3a6ad;
   border-radius: 8px;
 }
+.formgroup_ input:focus{
+  background: #a3a6ad;
+  transition: ease-in 2s background;
+}
 vue-tel-input{
    width: 95%;
   background: #ffffff;

@@ -38,17 +38,16 @@
                 type="text"
                 placeholder="Search.."
                 id="myInput"
-                @keypress="filteredList()"
-                v-model="input"
-              /> 
-                  <div v-for="fruit in filteredList()" :key="fruit">
-                 <p>{{ fruit }}</p>
-                 </div>
-
-              <!-- <a href="#about">Ghana</a>
+                v-model="search"
+              />
+              <div v-for="fruit in filteredList()" :key="fruit">
+                <a>{{ fruit }}</a>
+              </div> 
+           
+              <!--   <a href="#about">Ghana</a>
               <a href="#base">Base</a>
-              <a href="#blog">Blog</a>
-              <a href="#contact">Contact</a> -->
+              <a href="#blog">Blog</a>>
+              <a href="#contact">Contact</a>  -->
               <button>Apply Filter</button>
             </div>
           </div>
@@ -58,7 +57,7 @@
             <input
               class="fa fa-search"
               type="text"
-              placeholder="Search.."
+              placeholder="Search..."
               id="myInput_2"
             />
           </div>
@@ -153,6 +152,7 @@
 import Nav from "../components/nav.vue";
 import Modal from "../components/deletemodal.vue";
 import jsonData from "/db.json";
+//import { ref } from "vue";
 export default {
   components: { Nav, Modal },
   data() {
@@ -163,8 +163,8 @@ export default {
       openAction: "",
       showAction: true,
       openmodal: true,
- /*      input: ref(""), */
-      fruits: ["apple", "banana", "orange"],
+     search: "",
+    fruits: ["apple", "banana", "orange", "moses", "mike"],
       formdet: [
         /*         {
           check: "L",
@@ -288,11 +288,18 @@ export default {
       return (this.openmodal = false);
     },
 
+    
+
     filteredList() {
-      return fruits.filter((fruit) =>
-        fruit.toLowerCase().includes(input.value.toLowerCase())
+      return this.fruits.filter((fruit) => {
+        return fruit.toLowerCase().includes(this.search.toLowerCase())
+      }
+       
       );
     },
+    
+
+    
   },
 };
 </script>
@@ -416,7 +423,7 @@ export default {
 
 #myInput_2 {
   background-color: #f5f5f5;
-  padding: 10px 90px;
+  padding: 10px 50px;
   border: 1px solid #b0b3b9;
   font-size: 12px;
   /*   cursor: pointer; */
