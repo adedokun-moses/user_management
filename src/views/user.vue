@@ -245,7 +245,7 @@ tr {
     margin: 20px 4%;
   }
   .userdet {
-    width: 90%;
+    width: 100%;
     margin: auto;
     background: white;
     height: 500px;
@@ -256,7 +256,7 @@ tr {
     flex-direction: column;
   }
   .details_table td {
-    padding-left: 50px;
+    padding-left: 10px;
     border-bottom: 1px solid #d0d3d9;
     border-collapse: collapse;
   }

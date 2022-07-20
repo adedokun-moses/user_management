@@ -276,7 +276,7 @@ export default {
     },
 
     update() {
-      alert("updated");
+    //  alert("updated");
       this.$router.push("/update:id");
     },
 
