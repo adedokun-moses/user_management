@@ -1,0 +1,13 @@
+{
+    "formdet": [
+        {
+            "id": 1,
+            "fname": "John",
+            "lname": "Abubakar", 
+            "email": "adedokunmoses.1450@gmail.com",
+            "number": 2348034345656,
+            "sex": "Male",
+            "country": "Nigeria"
+        }
+    ]
+}

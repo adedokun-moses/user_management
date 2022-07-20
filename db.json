@@ -1,0 +1,56 @@
+[
+    {
+        "id": 1,
+        "fname": "John",
+        "lname": "Abubakar",
+        "email": "adedokunmoses.1450@gmail.com",
+        "number": 2348034345656,
+        "sex": "Male",
+        "country": "Nigeria"
+    },
+    {
+        "id": 2,
+        "fname": "John",
+        "lname": "Abubakar",
+        "email": "adedokunmoses.1450@gmail.com",
+        "number": 2348034345656,
+        "sex": "Male",
+        "country": "Nigeria"
+    },
+    {
+        "id": 3,
+        "fname": "John",
+        "lname": "Abubakar",
+        "email": "adedokunmoses.1450@gmail.com",
+        "number": 2348034345656,
+        "sex": "Male",
+        "country": "Nigeria"
+    },
+    {
+        "id": 4,
+        "fname": "John",
+        "lname": "Abubakar",
+        "email": "adedokunmoses.1450@gmail.com",
+        "number": 2348034345656,
+        "sex": "Male",
+        "country": "Nigeria"
+    },
+    {
+        "id": 5,
+        "fname": "John",
+        "lname": "Abubakar",
+        "email": "adedokunmoses.1450@gmail.com",
+        "number": 2348034345656,
+        "sex": "Male",
+        "country": "Nigeria"
+    },
+    {
+        "id": 6,
+        "fname": "John",
+        "lname": "Abubakar",
+        "email": "adedokunmoses.1450@gmail.com",
+        "number": 2348034345656,
+        "sex": "Male",
+        "country": "Nigeria"
+    }
+]
