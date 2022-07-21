@@ -19,7 +19,7 @@
 
       <div class="formgroup_">
         <label>Email Address </label><br />
-        <input type="email" placeholder="adedokunmoses@gmail.com" required/>
+        <input type="email" placeholder="adedokunmoses@gmail.com" required />
       </div>
 
       <div class="formgroup_">
@@ -182,9 +182,14 @@ export default {
 }
 
 @media only screen and (max-width: 600px) {
+  .form-page {
+    background: #f5f5f5;
+    height: 105vh;
+  }
   .regform {
     width: 90%;
     margin: auto;
+ 
   }
   .form-page h5 {
     padding: 10px 10px;
