@@ -37,11 +37,14 @@
       </div>
       <div class="formgroup_">
         <button>Register</button>
-        <h4>
-          Already have an account
-          <span><router-link to="#">Sign Up Here</router-link></span>
-        </h4>
+           <h4>
+        Already have an account
+        <span><router-link to="#">Sign Up Here</router-link></span>
+      </h4>
+      
       </div>
+
+     
     </form>
   </div>
 </template>
@@ -83,6 +86,7 @@ export default {
   font-size: 40px;
   margin: 0px;
 }
+
 .small {
   font-size: 20px;
 }
@@ -184,12 +188,13 @@ export default {
 @media only screen and (max-width: 600px) {
   .form-page {
     background: #f5f5f5;
-    height: 105vh;
+    height: auto;
   }
   .regform {
     width: 90%;
     margin: auto;
- 
+    background: #f5f5f5;
+   
   }
   .form-page h5 {
     padding: 10px 10px;
