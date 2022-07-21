@@ -40,9 +40,10 @@
                 id="myInput"
                 v-model="search"
               />
-              <div v-for="fruit in filteredList()" :key="fruit">
-                <a>{{ fruit }}</a>
-              </div> 
+          <!--     <option v-for="country in filteredList()" :key="country">
+                <a>{{ country }}</a>
+              </option>  -->
+                <vue-tel-input v-model="phone" class="formgroup_1"></vue-tel-input>
            
               <!--   <a href="#about">Ghana</a>
               <a href="#base">Base</a>
@@ -152,9 +153,10 @@
 import Nav from "../components/nav.vue";
 import Modal from "../components/deletemodal.vue";
 import jsonData from "/db.json";
+  import { VueTelInput } from 'vue-tel-input';
 //import { ref } from "vue";
 export default {
-  components: { Nav, Modal },
+  components: { Nav, Modal,VueTelInput  },
   data() {
     return {
       data: jsonData,
@@ -164,7 +166,7 @@ export default {
       showAction: true,
       openmodal: true,
      search: "",
-    fruits: ["apple", "banana", "orange", "moses", "mike"],
+  //  fruits: ["apple", "banana", "orange", "moses", "mike"],
       formdet: [
         /*         {
           check: "L",
@@ -291,8 +293,8 @@ export default {
     
 
     filteredList() {
-      return this.fruits.filter((fruit) => {
-        return fruit.toLowerCase().includes(this.search.toLowerCase())
+      return this.countries.filter((country) => {
+        return country.toLowerCase().includes(this.search.toLowerCase())
       }
        
       );
