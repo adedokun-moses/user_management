@@ -40,15 +40,14 @@
                 id="myInput"
                 v-model="search"
               />
-          <!--     <option v-for="country in filteredList()" :key="country">
-                <a>{{ country }}</a>
-              </option>  -->
-                <vue-tel-input v-model="phone" class="formgroup_1"></vue-tel-input>
-           
-              <!--   <a href="#about">Ghana</a>
-              <a href="#base">Base</a>
-              <a href="#blog">Blog</a>>
-              <a href="#contact">Contact</a>  -->
+           <h5  v-for="country in filteredList()"  :key="country.name"    >
+                    <input type="checkbox" style="margin-right: 10px;">
+                    <img :src="country.image" alt="" style="width: 8%" />
+                    {{ country.name }}
+                  </h5>
+         
+            
+
               <button>Apply Filter</button>
             </div>
           </div>
@@ -153,10 +152,11 @@
 import Nav from "../components/nav.vue";
 import Modal from "../components/deletemodal.vue";
 import jsonData from "/db.json";
-  import { VueTelInput } from 'vue-tel-input';
+import flags from "/flag.json";
+import { VueTelInput } from "vue-tel-input";
 //import { ref } from "vue";
 export default {
-  components: { Nav, Modal,VueTelInput  },
+  components: { Nav, Modal, VueTelInput },
   data() {
     return {
       data: jsonData,
@@ -165,8 +165,10 @@ export default {
       openAction: "",
       showAction: true,
       openmodal: true,
-     search: "",
-  //  fruits: ["apple", "banana", "orange", "moses", "mike"],
+      search: "",
+      flag: flags,
+
+      //  fruits: ["apple", "banana", "orange", "moses", "mike"],
       formdet: [
         /*         {
           check: "L",
@@ -254,7 +256,7 @@ export default {
 
   methods: {
     open_btn() {
-    //  alert(this.openBtn);
+      //  alert(this.openBtn);
       if (this.openBtn == true) {
         return (this.openBtn = false);
       }
@@ -273,35 +275,39 @@ export default {
       return (this.openAction = "");
     },
     wel() {
-    //  alert("working");
+      //  alert("working");
       this.$router.push("/user:id");
     },
 
     update() {
-    //  alert("updated");
+      //  alert("updated");
       this.$router.push("/update:id");
     },
 
     modal() {
-    //  alert(this.openmodal);
+      //  alert(this.openmodal);
       if (this.openmodal == true) {
         return (this.openmodal = false);
       }
       return (this.openmodal = false);
     },
 
-    
-
     filteredList() {
-      return this.countries.filter((country) => {
-        return country.toLowerCase().includes(this.search.toLowerCase())
+      if (this.search) {
+        return this.flag.filter((item) => {
+          return this.search
+            .toLowerCase()
+            .split(" ")
+            .every((v) => item.name.toLowerCase().includes(v));
+        });
+      } else {
+        return this.flag;
       }
-       
-      );
-    },
-    
 
-    
+      /*   return this.flag.filter((country) => {
+        return country.toLowerCase().includes(this.search.toLowerCase());
+      }); */
+    },
   },
 };
 </script>
@@ -372,9 +378,11 @@ export default {
   background-position: 14px 12px;
   background-repeat: no-repeat;
   font-size: 10px;
+  color: #2D323C;
   padding: 14px 20px 12px 45px;
   border: none;
   outline: none;
+ width: 210px;
   border-radius: 4px;
   border-bottom: 1px solid #ddd;
 }
@@ -389,16 +397,22 @@ export default {
   position: absolute;
   background-color: #f6f6f6;
   min-width: 230px;
+  height: 400px;
   border: 1px solid #ddd;
+  overflow: auto;
   z-index: 1;
 }
 
 /* Links inside the dropdown */
-.dropdown-content a {
+.dropdown-content h5 {
   color: black;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
+  background: #F0F3F7;
+  margin: 10px;
+  border-radius: 8px;
+  
 }
 .dropdown-content button {
   width: 90%;
@@ -559,6 +573,11 @@ table th {
     width: 100%;
     overflow: auto;
   }
+
+  #myInput {
+ width: 250px;
+
+}
 
   /*  >>>>>>>>>> pagination >>>>>>>>>>>>>>>>>>>> */
 

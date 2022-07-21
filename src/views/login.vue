@@ -15,7 +15,7 @@
         </div>
         <div class="formgroup">
           <label>Last Name </label><br />
-          <input type="text" placeholder="Enter Your First Name" />
+          <input type="text" placeholder="Enter Your Last Name" />
         </div>
       </div>
 
