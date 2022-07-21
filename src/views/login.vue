@@ -70,6 +70,7 @@ export default {
 <style scoped>
 .form-page {
   background: #f5f5f5;
+  height: 100vh;
 }
 .form-page h5 {
   padding: 10px 30px;

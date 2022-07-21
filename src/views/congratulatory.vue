@@ -19,7 +19,7 @@ export default {
 
   },
   mounted(){
-        setTimeout( () => this.$router.push({ path: '/home'}), 7000);
+        setTimeout( () => this.$router.push({ path: '/home'}), 4000);
   }
 }
 </script>
