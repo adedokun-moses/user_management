@@ -23,16 +23,11 @@
         <label>Email Address </label><br />
         <input
           type="email"
-          placeholder="Enter Your First Name"
+          placeholder="adedokunmoses@gmail.com"
        
         />
       </div>
-
-      <div class="formgroup_">
-        <label>Phone Number </label><br />
-        <input type="text" placeholder="Enter Your First Name" />
-
-      </div>
+      
       <div class="formgroup_">
             <vue-tel-input v-model="phone" class="formgroup_1"></vue-tel-input>
       </div>
