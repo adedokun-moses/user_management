@@ -41,9 +41,13 @@
                 v-model="search"
               />
            <h5  v-for="country in filteredList()"  :key="country.name"    >
-                    <input type="checkbox" style="margin-right: 10px;">
-                    <img :src="country.image" alt="" style="width: 8%" />
+                <label @change="select(det.id)">
+                   <input type="checkbox"  style="margin-right: 10px;" >
+                    <img :src="country.image" alt="f" style="width: 8%" />
                     {{ country.name }}
+
+                </label>
+                   
                   </h5>
          
             
@@ -267,6 +271,14 @@ export default {
       console.log(e.target.checked);
     },
 
+    select(id){
+      alert(id);
+      /*  if (this.openAction == "") {
+        return (this.openAction = id);
+      }
+      return (this.openAction = ""); */
+    },
+
     open_Action(id) {
       //  alert(this.openAction);
       if (this.openAction == "") {
@@ -439,7 +451,7 @@ export default {
 
 #myInput_2 {
   background-color: #f5f5f5;
-  padding: 10px 50px;
+  padding: 10px 90px;
   border: 1px solid #b0b3b9;
   font-size: 12px;
   /*   cursor: pointer; */

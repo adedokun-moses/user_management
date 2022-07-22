@@ -24,59 +24,61 @@
 
         <!-- Tab content -->
         <div id="London" class="tabcontent viewdetails">
-          <div class="details_table">
-            <table v-for="det in data" :key="det.id">
-              <tr>
-                <th>First Name</th>
-                <td>{{ det.fname }}</td>
-              </tr>
-              <tr>
-                <th>Last Name</th>
-                <td>{{ det.lname }}</td>
-              </tr>
+          <div class="viewdetails">
+            <div class="details_table">
+              <table v-for="det in data" :key="det.id">
+                <tr>
+                  <th>First Name</th>
+                  <td>{{ det.fname }}</td>
+                </tr>
+                <tr>
+                  <th>Last Name</th>
+                  <td>{{ det.lname }}</td>
+                </tr>
 
-              <tr>
-                <th>Email</th>
-                <td>{{ det.email }}</td>
-              </tr>
+                <tr>
+                  <th>Email</th>
+                  <td>{{ det.email }}</td>
+                </tr>
 
-              <tr>
-                <th>Country</th>
-                <td>{{ det.country }}</td>
-              </tr>
+                <tr>
+                  <th>Country</th>
+                  <td>{{ det.country }}</td>
+                </tr>
 
-              <tr>
-                <th>Phone No.</th>
-                <td>{{ det.number }}</td>
-              </tr>
+                <tr>
+                  <th>Phone No.</th>
+                  <td>{{ det.number }}</td>
+                </tr>
 
-              <tr>
-                <th>Gender</th>
-                <td>{{ det.sex }}</td>
-              </tr>
-            </table>
+                <tr>
+                  <th>Gender</th>
+                  <td>{{ det.sex }}</td>
+                </tr>
+              </table>
 
-            <!--   <div v-for="det in data" :key="det.id">
+              <!--   <div v-for="det in data" :key="det.id">
               <p>{{ det.id }}</p>
             </div> -->
-          </div>
+            </div>
 
-          <div class="details_table_">
-            <table>
-              <tr>
-                <th>Status</th>
-                <td><h5>Active</h5></td>
-              </tr>
-              <tr>
-                <th>Registeration Date</th>
-                <td><b>21st June 2022</b></td>
-              </tr>
-            </table>
+            <div class="details_table_">
+              <table>
+                <tr>
+                  <th>Status</th>
+                  <td><h5>Active</h5></td>
+                </tr>
+                <tr>
+                  <th>Registeration Date</th>
+                  <td><b>21st June 2022</b></td>
+                </tr>
+              </table>
+            </div>
           </div>
         </div>
 
         <div id="Paris" class="tabcontent">
-          <h3>Activities </h3>
+          <h3>Activities</h3>
           <p></p>
         </div>
       </div>
@@ -172,9 +174,7 @@ export default {
 }
 
 /* Create an active/current tablink class */
-.tab button.active {
-  background-color: #ccc;
-  padding: 14px 16px;
+.tab button:focus {
   border-bottom: 1px solid green;
 }
 

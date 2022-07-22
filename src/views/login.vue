@@ -23,7 +23,7 @@
       </div>
 
       <div class="formgroup_">
-        <vue-tel-input v-model="phone" class="formgroup_1"></vue-tel-input>
+        <vue-tel-input v-model="number" class="formgroup_1"></vue-tel-input>
       </div>
 
       <div class="formgroup_">
@@ -37,14 +37,11 @@
       </div>
       <div class="formgroup_">
         <button>Register</button>
-           <h4>
-        Already have an account
-        <span><router-link to="#">Sign Up Here</router-link></span>
-      </h4>
-      
+        <h4>
+          Already have an account
+          <span><router-link to="#">Log In</router-link></span>
+        </h4>
       </div>
-
-     
     </form>
   </div>
 </template>
@@ -54,7 +51,9 @@ import { VueTelInput } from "vue-tel-input";
 export default {
   components: { VueTelInput },
   data() {
-    return {};
+    return {
+      number: ''
+    };
   },
   methods: {
     nextPage() {
@@ -114,10 +113,6 @@ export default {
   border: 1px solid #a3a6ad;
   border-radius: 8px;
 }
-.formgroup input:focus {
-  background: #a3a6ad;
-  transition: ease-in 2s background;
-}
 .formgroup_ input {
   width: 95%;
   background: #ffffff;
@@ -127,10 +122,6 @@ export default {
   border: none;
   border: 1px solid #a3a6ad;
   border-radius: 8px;
-}
-.formgroup_ input:focus {
-  background: #a3a6ad;
-  transition: ease-in 2s background;
 }
 
 .formgroup_ select {
@@ -143,17 +134,6 @@ export default {
   border: 1px solid #a3a6ad;
   border-radius: 8px;
 }
-
-/* .formgroup_1 {
-  width: 95%;
-  background: #ffffff;
-  padding: 15px 10px;
-  margin: 10px 0px;
-  outline: none;
-  border: none;
-  border: 1px solid #a3a6ad;
-  border-radius: 8px;
-} */
 
 .formgroup_ button {
   width: 98%;
@@ -178,11 +158,22 @@ export default {
 .formgroup_1 {
   width: 95%;
   background: #ffffff;
+  border: 1px solid #a3a6ad!important;
+  padding: 10px 10px;
+  margin: 10px 0px;
+  box-shadow: none!important;
+  outline: none !important;
+  border-radius: 8px;
+}
+
+.formgroup_1:focus,.formgroup_1:hover,.formgroup_1:active {
+  width: 95%;
+  background: #ffffff;
+  border: 1px solid #a3a6ad!important;
   padding: 10px 10px;
   margin: 10px 0px;
   outline: none !important;
-  border: none !important;
-  border: 1px solid #a3a6ad;
+  box-shadow: none!important;
   border-radius: 8px;
 }
 
@@ -195,7 +186,6 @@ export default {
     width: 90%;
     margin: auto;
     background: #f5f5f5;
-   
   }
   .form-page h5 {
     padding: 10px 10px;

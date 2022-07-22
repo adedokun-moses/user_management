@@ -1,10 +1,14 @@
 <template>
-
   <router-view />
 </template>
 
 <style>
-*{
+body {
+  font-family: "Inter";
+  font-style: normal;
+font-weight: 500;
+}
+* {
   margin: 0px;
   padding: 0px;
 }
