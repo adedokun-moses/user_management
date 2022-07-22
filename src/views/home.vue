@@ -571,6 +571,7 @@ table th {
     width: 70%;
   }
   .search__btn button {
+    display: none;
     color: white;
     padding: 10px 0px;
     border: 2px solid blue;
